@@ -1,1 +1,3 @@
-# Rock-paper-scissors-game played in the console
+# Rock-paper-scissors-game 
+
+Played in prompt for 5 rounds 
