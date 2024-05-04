@@ -1,6 +1,6 @@
 function getComputerChoice(){
     let choice;
-    let randomNum = Math.floor(Math.random() * 3);
+    let randomNum = Math.floor(Math.random() * 3);//Random number between 0 - 2
     if (randomNum == 0){
         return choice = "Rock";
     }
@@ -33,9 +33,6 @@ function getHumanChoice(){
 
 function playRound(computerChoice, humanChoice){
     let winner;
-   // console.log("Computer: "+computerChoice);
-   // console.log("Human: "+humanChoice);
-
     if(computerChoice == humanChoice){
         winner = "It's a Tie!";
     }
@@ -66,34 +63,34 @@ function playGame(){
     let winner;
     
 
-    for (let i = 1; i < 6; i++) {
+    for (let i = 1; i < 6; i++) {//Plays 5 rounds
         alert("Round "+i+" press Ok to start.");
         const computerChoice = getComputerChoice();
         const humanChoice = getHumanChoice();
         winner = playRound(computerChoice, humanChoice);
-        if (winner == "Computer Wins!"){
-            ++computerScore;//Add one point to computer
-            alert(computerChoice+" beats "+humanChoice+" Computer wins this round.Computer Score: "+computerScore+" Your Score: "+humanScore);
+        if (winner == "Computer Wins!"){//Add one point to computer
+            ++computerScore;
+            alert(computerChoice+" beats "+humanChoice+" Computer wins this round.Computer's Score: "+computerScore+" Your Score: "+humanScore);
         }
-        else if (winner == "Human Wins!"){
-            ++humanScore;//Add one point to human
-            alert(humanChoice+" beats "+computerChoice+" You win this round.Computer Score: "+computerScore+" Your Score: "+humanScore);
+        else if (winner == "Human Wins!"){//Add one point to human
+            ++humanScore;
+            alert(humanChoice+" beats "+computerChoice+" You win this round.Computer's Score: "+computerScore+" Your Score: "+humanScore);
         }
         else {
+            //Tie do nothing
             alert("It's a tie");
-        }
-        //console.log(winner);
-        
+        } 
     }
+    //Game end
     console.log("computer:"+computerScore+" human:"+humanScore);
     if (computerScore > humanScore){
-        alert("Computer Wins the game! Computer Score: "+computerScore+" Your Score: "+humanScore);
+        alert("Computer Wins the game! Computer's Score: "+computerScore+" Your Score: "+humanScore);
     }
     else if(computerScore < humanScore){
-        alert("You Win the game! Computer Score: "+computerScore+" Your Score: "+humanScore);
+        alert("You Win the game! Computer's Score: "+computerScore+" Your Score: "+humanScore);
     }
     else{
-        alert("It's a TIE! Computer Score: "+computerScore+" Your Score: "+humanScore);
+        alert("It's a TIE! Computer's Score: "+computerScore+" Your Score: "+humanScore);
     }
     
     
